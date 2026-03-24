@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+    <title>Threetab</title>
+    <link rel="stylesheet" href="pico.min.css">
+    <link rel="stylesheet" href="sidepanel.css">
+  </head>
+  <body>
+    <main>
+      <!-- Header -->
+      <header>
+      <!-- Search -->
+      <input type="text" id="search" name="text" placeholder="Search tabs" aria-label="Text">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 6px 10px;">
+        <span id="queued-count">Tabs Queued: <span id="queued-count-value"></span></span>
+        <div>
+          <span style="font-size: 0.75rem; color: var(--text-secondary); margin-right: 4px;">limit</span>
+          <button id="decrease" style="padding: 2px 8px; font-size: 0.75rem;">-</button>
+          <span id="tab-count-value" style="margin: 0 6px;"></span>
+          <button id="increase" style="padding: 2px 8px; font-size: 0.75rem;">+</button>
+        </div>
+      </div>
+
+      </header>
+
+
+      <!-- Tab list grouped by hostname -->
+      <div id="tab-list" style="margin-top: 20px;">
+        <!-- Dynamically rendered by sidepanel.js -->
+          <!-- <section>
+            <h6>github.com</h6>
+            <ul>
+              <li>...</li>
+            </ul>
+          </section> -->
+      </div>
+    </main>
+
+    <script src="sidepanel.js"></script>
+  </body>
+</html>
